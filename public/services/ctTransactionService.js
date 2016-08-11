@@ -10,7 +10,7 @@ app.factory('$ctTransactionService', ['$http','$rootScope', function($http,$root
 	var f = {};
 
 	f.requestMyHistory = function(){
-		$http.get('/requestMyHistory').success(function (response){$rootScope.$broadcast('eventRequestMyHistory', response)});
+		$http.get('/ctRequestMyHistory').success(function (response){$rootScope.$broadcast('eventRequestMyHistory', response)});
 	}
 
 	return f;

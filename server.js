@@ -19,7 +19,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
 //Below are the transactions supported by this server.
-app.get('/ctRequestBalance', function (req, res){
+app.get('/ctRequestMyHistory', function (req, res){
 	//
 	//Sample code to query database.
 	//
@@ -27,7 +27,7 @@ app.get('/ctRequestBalance', function (req, res){
 	//	res.json(docs);
 	//});
 	//
-	console.log("Activating /ctRequestBalance route on CriptoTransfer System service.");
+	console.log("Activating /ctRequestMyHistory route on CriptoTransfer System service.");
 });
 
 app.post('/ctSendNewOrder', function (req, res){
