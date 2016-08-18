@@ -1,1 +1,1 @@
-var app = angular.module('CriptoTransfer', []);
+var app = angular.module('CriptoTransfer', ['ngRoute']);

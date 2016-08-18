@@ -8,67 +8,19 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
-      <title>CriptoTransfer | Sistema de Registro de Transações</title>
+	<script src="angular.min.js"></script>
+	<script src="angular-route.min.js"></script>
+	<script src="modules/CriptoTransferApp.js"></script>
+	<script src="routes/ctRoutes.js"></script>
+
+      <title>Sistema CriptoTransfer</title>
 </head>
 <body>
-	
-	<div class="container" ng-controller="ctTransactionController">
-	<p align="Center"><img src="images/CRIPTOTRANSFER_logo.jpg" border=0 width="300" height="298"></p>
-	
-		<table class="table">
-			<h3>Comprar BTC</h3>
-			<tr>
-				<td width=30%><input class="form-control" ng-model="cttrans.amountBTCToPurchase"></td><td width=30%><input class="form-control" ng-model="cttrans.amountBRL"></td>
-			</tr>
-			
-			<tr>
-				<td colspan=2 align="right">
-					<button class="btn btn-primary" ng-click="submitBTCPurchaseOrder()">COMPRAR</button>&nbsp;&nbsp;
-				</td>
-			</tr>
-		</table>
 
-		<table class="table">
-			<h3>Vender BTC</h3>
-			<tr>
-				<td width=30%><input class="form-control" ng-model="cttrans.amountBTCToSell"></td><td width=30%><input class="form-control" ng-model="cttrans.amountBRL"></td>
-			</tr>
-			
-			<tr>
-				<td colspan=2 align="right">
-					<button class="btn btn-danger" ng-click="submitBTCSellOrder()">VENDER</button>&nbsp;&nbsp;
-				</td>
-			</tr>
-		</table>
-
-		<table class="table">
-			<thead>
-				<tr>
-					<th width="10%">Data/Hora</th>
-					<th width="30%">Descrição</th>
-					<th width="30%">Situação</th>
-					<th width="10%">Preço</th>
-					<th width="10%">Total</th>
-					<th width="10%">Ações</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="cttrans in cttransactions | orderBy:'-transactionDate'">
-					<td>{{cttrans.transactionDate}}</td>
-					<td>{{cttrans.transactionDescription}}</td>
-					<td>{{cttrans.transactionSituation}}</td>
-					<td>{{cttrans.transactionUnitPrice}}</td>
-					<td>{{cttrans.transactionTotal}}</td>
-					<td>{{cttrans.transactionActions}}</td>
-				</tr>
-			</tbody>
-		</table>
-    </div>
-
-	<script src="angular.min.js"></script>
-	<script src="modules/CriptoTransferApp.js"></script>
-	<script src="services/ctTransactionService.js"></script>
-	<script src="controllers/ctTransactionController.js"></script>
+	<p align="Center">
+		<img src="images/CRIPTOTRANSFER_logo.jpg" border=0 width="300" height="298">
+	</p>
+<div ng-view></div>
 
 </body>
 </html>

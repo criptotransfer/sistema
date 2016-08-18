@@ -1,0 +1,58 @@
+	<script src="services/ctTransactionService.js"></script>
+	<script src="controllers/ctTransactionController.js"></script>
+
+	<div class="container" ng-controller="ctTransactionController">
+	
+		<table class="table">
+			<h3>Comprar BTC</h3>
+			<tr>
+				<td width=30%><input class="form-control" ng-model="cttrans.amountBTCToPurchase"></td><td width=30%><input class="form-control" ng-model="cttrans.amountBRL"></td>
+			</tr>
+			
+			<tr>
+				<td colspan=2 align="right">
+					<button class="btn btn-primary" ng-click="submitBTCPurchaseOrder()">COMPRAR</button>&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<h3>Vender BTC</h3>
+			<tr>
+				<td width=30%><input class="form-control" ng-model="cttrans.amountBTCToSell"></td><td width=30%><input class="form-control" ng-model="cttrans.amountBRL"></td>
+			</tr>
+			
+			<tr>
+				<td colspan=2 align="right">
+					<button class="btn btn-danger" ng-click="submitBTCSellOrder()">VENDER</button>&nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th colspan="6">Minhas Ordens</th>
+				<tr>
+					<th width="10%">Data/Hora</th>
+					<th width="30%">Descrição</th>
+					<th width="30%">Situação</th>
+					<th width="10%">Preço</th>
+					<th width="10%">Total</th>
+					<th width="10%">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="cttrans in cttransactions | orderBy:'-transactionDate'">
+					<td>{{cttrans.transactionDate}}</td>
+					<td>{{cttrans.transactionDescription}}</td>
+					<td>{{cttrans.transactionSituation}}</td>
+					<td>{{cttrans.transactionUnitPrice}}</td>
+					<td>{{cttrans.transactionTotal}}</td>
+					<td>{{cttrans.transactionActions}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+    </div>
+
