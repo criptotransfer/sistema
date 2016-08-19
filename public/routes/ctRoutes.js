@@ -6,13 +6,19 @@
 // Updated by Dax Faulstich Diniz Reis (@daxfdr) on august 17, 2016.
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.when('/', {
-		templateUrl: 'views/ctIndex.html'
+		templateUrl: 'views/Index.html'
 	})
 	.when('/login', {
-		templateUrl: 'views/ctLogin.html'
+		templateUrl: 'views/Login.html'
 	})
-	.when('/comprafacil', {
-		templateUrl: 'views/ctPainelCompraFacil.html'
+	.when('/foxbit', {
+		templateUrl: 'views/FoxBit.html'
+	})
+	.when('/comprafacilfoxbit', {
+		templateUrl: 'views/CompraFacilFoxBit.html'
+	})
+	.when('/bleutrade', {
+		templateUrl: 'views/Bleutrade.html'
 	})
 	.otherwise({redirectTo: '/'});
 }])

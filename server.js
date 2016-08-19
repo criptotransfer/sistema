@@ -7,12 +7,12 @@
 
 //Adding dependencies
 var express = require('express');
-var mongojs = require('mongojs');
+//var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
 
 //Instancing Express framework and MongoDB library
 var app = express();
-var db = mongojs('criptotransfer', ['ctTransactions']);
+//var db = mongojs('criptotransfer', ['']);
 
 //Point to Express framework to handle HTML partials
 app.use(express.static(__dirname + "/public"));
