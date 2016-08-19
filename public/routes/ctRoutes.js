@@ -12,7 +12,7 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'views/Login.html'
 	})
 	.when('/foxbit', {
-		templateUrl: 'views/FoxBit.html'
+		templateUrl: 'views/Foxbit.html'
 	})
 	.when('/comprafacilfoxbit', {
 		templateUrl: 'views/CompraFacilFoxBit.html'
