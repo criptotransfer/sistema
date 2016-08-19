@@ -17,6 +17,12 @@ app.config(['$routeProvider', function($routeProvider){
 	.when('/comprafacilfoxbit', {
 		templateUrl: 'views/CompraFacilFoxBit.html'
 	})
+	.when('/depositarfoxbit', {
+		templateUrl: 'views/DepositarFoxbit.html'
+	})
+	.when('/bookfoxbit', {
+		templateUrl: 'views/BookFoxBit.html'
+	})
 	.when('/bleutrade', {
 		templateUrl: 'views/Bleutrade.html'
 	})
