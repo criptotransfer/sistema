@@ -24,7 +24,7 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl: 'views/DepositarFoxbit.html'
 	})
 	.when('/bookfoxbit', {
-		templateUrl: 'views/BookFoxBit.html'
+		templateUrl: 'views/BookFoxbit.html'
 	})
 	.when('/bleutrade', {
 		templateUrl: 'views/Bleutrade.html'
