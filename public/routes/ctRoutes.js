@@ -11,6 +11,9 @@ app.config(['$routeProvider', function($routeProvider){
 	.when('/login', {
 		templateUrl: 'views/Login.html'
 	})
+	.when('/sobre', {
+		templateUrl: 'views/Sobre.html'
+	})
 	.when('/foxbit', {
 		templateUrl: 'views/Foxbit.html'
 	})
