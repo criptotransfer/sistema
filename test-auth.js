@@ -1,30 +1,11 @@
-// server.js
-//
-// This is the backend server startup app.
-//
-// Created by Dax Faulstich Diniz Reis (@daxfdr) on july 29, 2016. 
-// Last update by Dax Faulstich Diniz Reis (@daxfdr) on august 24, 2016.
-
-//Adding dependencies
-var express = require('express');
-//var mongojs = require('mongojs');
-var bodyParser = require('body-parser');
-
-
-//Instancing Express framework and MongoDB library
-var app = express();
-//var db = mongojs('criptotransfer', ['']);
-
-//Point to Express framework to handle HTML partials
-app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.json());
-
-
-// BlinkTrade WebSocket API integration.
-// See documentation at https://blinktrade.com/docs/#websocket-api
+// test-auth.js - Code downloaded from http://pastebin.com/bqjgf6ZR
+// Just run "$node test-auth" from root app folder.
 
 // Require WebSocket module
 var WebSocket = require("ws");
+
+// Open WebSocket with BlinkTrade Testnet
+var ws = new WebSocket("wss://api.testnet.blinktrade.com/trade/");
 
 // TestReqID for Heartbeat (MsgType: "1") message
 var testReqID;
@@ -126,20 +107,3 @@ ws.on("message", function(data) {
     }
 
 });
-
-
-// Below are the CriptoTransfer System service HTTP Routes
-app.get('/ctConnectBlinkTrade', function (req, res){
-
-    console.log("Activating /ctConnectBlinkTrade route on CriptoTransfer System service.");
-    console.log("Connecting BlinkTrade Testnet...");
-
-    // Open WebSocket connection with BlinkTrade Testnet
-    var ws = new WebSocket("wss://api.testnet.blinktrade.com/trade/");
-
-});
-
-
-//Create backend server instance using and available TCP port.
-app.listen(3000);
-console.log("CriptoTransfer System running on port 3000");

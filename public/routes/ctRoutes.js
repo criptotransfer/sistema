@@ -1,6 +1,6 @@
 // CriptoTransfer Angular Routes - ctRoutes (ctRoutes.js)
 //
-// Angular.JS Controller to handle transactions.
+// Angular.JS Routes.
 //
 // Created by Dax Faulstich Diniz Reis (@daxfdr) on august 15, 2016. 
 // Updated by Dax Faulstich Diniz Reis (@daxfdr) on august 17, 2016.
